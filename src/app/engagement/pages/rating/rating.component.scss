@@ -1,0 +1,114 @@
+.rating-container {
+  padding: 32px 24px;
+  max-width: 680px;
+  margin: 0 auto;
+
+  .rating-header {
+    margin-bottom: 32px;
+
+    .rating-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #3f51b5;
+      margin: 0;
+    }
+  }
+
+  .rating-section {
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.78);
+      margin: 0 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #3f51b5;
+      display: inline-block;
+    }
+
+    .rating-card {
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(63, 81, 181, 0.1);
+
+      mat-card-content {
+        padding: 24px;
+      }
+
+      .rating-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .full-width {
+          width: 100%;
+        }
+
+        .submit-button {
+          align-self: flex-start;
+          margin-top: 12px;
+          padding: 0 28px;
+          height: 46px;
+          font-size: 0.95rem;
+          letter-spacing: 0.5px;
+          gap: 8px;
+          border-radius: 6px;
+        }
+      }
+
+      .feedback-msg {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 0.92rem;
+        line-height: 1.4;
+        animation: fadeIn 0.3s ease;
+
+        mat-icon {
+          flex-shrink: 0;
+        }
+
+        &.success {
+          background: #e8f5e9;
+          color: #1b5e20;
+          border: 1px solid #a5d6a7;
+        }
+
+        &.error {
+          background: #ffebee;
+          color: #b71c1c;
+          border: 1px solid #ef9a9a;
+        }
+
+        &.warning {
+          background: #fff8e1;
+          color: #e65100;
+          border: 1px solid #ffcc80;
+        }
+
+        &.info {
+          background: #e3f2fd;
+          color: #0d47a1;
+          border: 1px solid #90caf9;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .rating-container {
+    padding: 20px 16px;
+
+    .rating-header .rating-title {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.event-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: default;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+  }
+
+  mat-card-header {
+    background: linear-gradient(135deg, #3f51b5, #1a237e);
+    border-radius: 4px 4px 0 0;
+    padding: 14px 16px;
+
+    ::ng-deep .mat-mdc-card-title {
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+  }
+
+  mat-card-content {
+    flex: 1;
+    padding: 16px;
+    overflow: hidden;
+
+    .event-description {
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 1.6;
+      margin: 0;
+      font-size: 0.9rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  .event-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: rgba(63, 81, 181, 0.05);
+    border-top: 1px solid rgba(63, 81, 181, 0.15);
+    gap: 8px;
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+      min-width: 0;
+
+      mat-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        color: #3f51b5;
+        flex-shrink: 0;
+      }
+
+      .stat-label {
+        font-size: 0.7rem;
+        color: rgba(0, 0, 0, 0.55);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .stat-value {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #3f51b5;
+        margin-left: auto;
+        flex-shrink: 0;
+
+        &.no-ratings {
+          font-size: 0.72rem;
+          color: rgba(0, 0, 0, 0.38);
+          font-weight: 400;
+          font-style: italic;
+        }
+      }
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 28px;
+      background: rgba(0, 0, 0, 0.12);
+      flex-shrink: 0;
+    }
+  }
+}

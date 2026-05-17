@@ -1,0 +1,17 @@
+// Angular Material pre-built theme: indigo-pink
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}

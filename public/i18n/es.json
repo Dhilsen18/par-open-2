@@ -1,0 +1,31 @@
+{
+  "toolbar": {
+    "certified": "ISO 27001:2022 certificado",
+    "home": "Inicio",
+    "rating": "Calificación"
+  },
+  "home": {
+    "title": "Inicio",
+    "welcome": "Bienvenido a Eventify",
+    "registeredEvents": "Eventos Registrados",
+    "checkedInAttendees": "Asistentes con Check-In",
+    "averageRating": "Calificación Promedio",
+    "noRatings": "Sin calificaciones"
+  },
+  "rating": {
+    "title": "Calificación de Evento",
+    "sectionTitle": "Agrega una Calificación para el Evento al que asististe",
+    "ticketIdentifier": "Identificador de Ticket",
+    "rating": "Calificación",
+    "rateEvent": "Calificar Evento",
+    "successMessage": "Evento calificado exitosamente",
+    "invalidTicket": "Identificador de Ticket Inválido",
+    "notAttended": "Solo puedes calificar eventos a los que has asistido",
+    "alreadyRated": "Ya has calificado este evento"
+  },
+  "notFound": {
+    "message": "La página",
+    "notFoundText": "no fue encontrada",
+    "backHome": "Volver al Inicio"
+  }
+}

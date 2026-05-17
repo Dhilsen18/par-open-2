@@ -1,0 +1,35 @@
+<main class="home-container" role="main" aria-label="Home page">
+  <header class="home-header">
+    <h1 class="home-title">{{ 'home.title' | translate }}</h1>
+    <p class="home-welcome">{{ 'home.welcome' | translate }}</p>
+  </header>
+
+  <section aria-label="Registered Events section" class="events-section">
+    <h2 class="section-title">{{ 'home.registeredEvents' | translate }}</h2>
+
+    <div *ngIf="isLoading" class="loading-state" aria-live="polite" aria-busy="true">
+      <p>Loading events...</p>
+    </div>
+
+    <mat-grid-list
+      *ngIf="!isLoading && events.length > 0"
+      [cols]="gridCols"
+      rowHeight="320px"
+      gutterSize="20px"
+      aria-label="Registered events grid"
+    >
+      <mat-grid-tile *ngFor="let event of events">
+        <app-event-summary
+          [event]="event"
+          [attendees]="attendees"
+          [ratings]="ratings"
+          class="tile-full"
+        ></app-event-summary>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <p *ngIf="!isLoading && events.length === 0" class="no-events">
+      No events registered yet.
+    </p>
+  </section>
+</main>

@@ -1,0 +1,51 @@
+<mat-toolbar role="banner" aria-label="Eventify main navigation toolbar" class="app-toolbar">
+
+  <!-- Left section: Logo + ISO certification text -->
+  <div class="toolbar-left">
+    <img
+      [src]="logoUrl"
+      alt="Eventify company logo"
+      class="toolbar-logo"
+      onerror="this.style.display='none'"
+    />
+    <span class="toolbar-cert" aria-label="ISO 27001:2022 certified">
+      {{ 'toolbar.certified' | translate }}
+    </span>
+  </div>
+
+  <!-- Center section: Navigation links -->
+  <nav class="toolbar-center" aria-label="Primary navigation">
+    <a
+      mat-button
+      routerLink="/home"
+      routerLinkActive="nav-active"
+      aria-label="Navigate to Home"
+    >
+      {{ 'toolbar.home' | translate }}
+    </a>
+    <a
+      mat-button
+      routerLink="/engagement/ratings/new"
+      routerLinkActive="nav-active"
+      aria-label="Navigate to Rating"
+    >
+      {{ 'toolbar.rating' | translate }}
+    </a>
+  </nav>
+
+  <!-- Right section: Language switcher -->
+  <div class="toolbar-right">
+    <mat-form-field appearance="outline" class="lang-select" aria-label="Language selector">
+      <mat-select
+        [(ngModel)]="selectedLanguage"
+        (ngModelChange)="onLanguageChange($event)"
+        aria-label="Select display language"
+      >
+        <mat-option *ngFor="let lang of languages" [value]="lang">
+          {{ lang }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+</mat-toolbar>

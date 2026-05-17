@@ -1,0 +1,67 @@
+.home-container {
+  padding: 32px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .home-header {
+    margin-bottom: 40px;
+
+    .home-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #3f51b5;
+      margin: 0 0 8px;
+    }
+
+    .home-welcome {
+      font-size: 1.1rem;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0;
+    }
+  }
+
+  .events-section {
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.8);
+      margin: 0 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #3f51b5;
+      display: inline-block;
+    }
+
+    .loading-state {
+      text-align: center;
+      padding: 48px;
+      color: rgba(0, 0, 0, 0.5);
+      font-style: italic;
+    }
+
+    .no-events {
+      text-align: center;
+      padding: 48px;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    mat-grid-list {
+      ::ng-deep mat-grid-tile {
+        .tile-full {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 20px 16px;
+
+    .home-header .home-title {
+      font-size: 1.5rem;
+    }
+  }
+}

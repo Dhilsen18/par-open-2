@@ -1,0 +1,107 @@
+<main class="rating-container" role="main" aria-label="Event rating page">
+  <header class="rating-header">
+    <h1 class="rating-title">{{ 'rating.title' | translate }}</h1>
+  </header>
+
+  <section aria-labelledby="rating-section-title" class="rating-section">
+    <h2 id="rating-section-title" class="section-title">
+      {{ 'rating.sectionTitle' | translate }}
+    </h2>
+
+    <mat-card class="rating-card">
+      <mat-card-content>
+        <form class="rating-form" aria-label="Event rating form" novalidate>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ 'rating.ticketIdentifier' | translate }}</mat-label>
+            <input
+              matInput
+              [(ngModel)]="ticketIdentifier"
+              name="ticketIdentifier"
+              type="text"
+              required
+              autocomplete="off"
+              aria-required="true"
+              aria-label="Ticket identifier"
+              placeholder="e.g. TICKET-001"
+            />
+            <mat-icon matSuffix aria-hidden="true">confirmation_number</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ 'rating.rating' | translate }}</mat-label>
+            <input
+              matInput
+              [(ngModel)]="ratingValue"
+              name="ratingValue"
+              type="number"
+              min="1"
+              max="5"
+              required
+              aria-required="true"
+              aria-label="Rating value, enter integer between 1 and 5"
+              placeholder="1 - 5"
+            />
+            <mat-icon matSuffix aria-hidden="true">star_rate</mat-icon>
+            <mat-hint>{{ 'rating.rating' | translate }}: 1 (poor) — 5 (excellent)</mat-hint>
+          </mat-form-field>
+
+          <button
+            mat-raised-button
+            color="primary"
+            class="submit-button"
+            [disabled]="!isFormValid || isSubmitting"
+            (click)="onRateEvent()"
+            aria-label="Submit rating for attended event"
+            type="button"
+          >
+            <mat-icon aria-hidden="true">send</mat-icon>
+            {{ 'rating.rateEvent' | translate }}
+          </button>
+        </form>
+
+        <!-- Feedback messages -->
+        <div
+          *ngIf="result === 'success'"
+          class="feedback-msg success"
+          role="alert"
+          aria-live="assertive"
+        >
+          <mat-icon aria-hidden="true">check_circle</mat-icon>
+          <span>{{ 'rating.successMessage' | translate }}</span>
+        </div>
+
+        <div
+          *ngIf="result === 'invalidTicket'"
+          class="feedback-msg error"
+          role="alert"
+          aria-live="assertive"
+        >
+          <mat-icon aria-hidden="true">error_outline</mat-icon>
+          <span>{{ 'rating.invalidTicket' | translate }}</span>
+        </div>
+
+        <div
+          *ngIf="result === 'notAttended'"
+          class="feedback-msg warning"
+          role="alert"
+          aria-live="assertive"
+        >
+          <mat-icon aria-hidden="true">warning_amber</mat-icon>
+          <span>{{ 'rating.notAttended' | translate }}</span>
+        </div>
+
+        <div
+          *ngIf="result === 'alreadyRated'"
+          class="feedback-msg info"
+          role="alert"
+          aria-live="assertive"
+        >
+          <mat-icon aria-hidden="true">info</mat-icon>
+          <span>{{ 'rating.alreadyRated' | translate }}</span>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </section>
+</main>

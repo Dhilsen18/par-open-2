@@ -1,0 +1,109 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Tech Summit 2024",
+      "description": "Annual technology conference featuring the latest innovations in software development, AI, and cloud computing.",
+      "scheduledAt": "2024-10-15T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Open Source Day",
+      "description": "A full-day event celebrating open source software, featuring talks from top contributors and live coding sessions.",
+      "scheduledAt": "2024-10-20T08:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "UX Design Workshop",
+      "description": "Hands-on workshop exploring the latest trends in user experience design and product development.",
+      "scheduledAt": "2024-11-05T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Agile Summit",
+      "description": "Conference focused on agile methodologies, scrum practices, and modern project management strategies.",
+      "scheduledAt": "2024-11-12T09:00:00Z"
+    }
+  ],
+  "attendees": [
+    {
+      "id": 1,
+      "firstName": "Carlos",
+      "lastName": "García",
+      "eventId": 1,
+      "ticketIdentifier": "TICKET-001",
+      "checkedInAt": "2024-10-15T09:30:00Z"
+    },
+    {
+      "id": 2,
+      "firstName": "María",
+      "lastName": "López",
+      "eventId": 1,
+      "ticketIdentifier": "TICKET-002",
+      "checkedInAt": "2024-10-15T09:45:00Z"
+    },
+    {
+      "id": 3,
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "eventId": 1,
+      "ticketIdentifier": "TICKET-003",
+      "checkedInAt": null
+    },
+    {
+      "id": 4,
+      "firstName": "Ana",
+      "lastName": "Martínez",
+      "eventId": 2,
+      "ticketIdentifier": "TICKET-004",
+      "checkedInAt": "2024-10-20T08:30:00Z"
+    },
+    {
+      "id": 5,
+      "firstName": "Luis",
+      "lastName": "Rodríguez",
+      "eventId": 2,
+      "ticketIdentifier": "TICKET-005",
+      "checkedInAt": "2024-10-20T08:45:00Z"
+    },
+    {
+      "id": 6,
+      "firstName": "Sofia",
+      "lastName": "Torres",
+      "eventId": 3,
+      "ticketIdentifier": "TICKET-006",
+      "checkedInAt": "2024-11-05T10:15:00Z"
+    },
+    {
+      "id": 7,
+      "firstName": "Diego",
+      "lastName": "Flores",
+      "eventId": 4,
+      "ticketIdentifier": "TICKET-007",
+      "checkedInAt": null
+    }
+  ],
+  "ratings": [
+    {
+      "id": 1,
+      "attendeeId": 1,
+      "eventId": 1,
+      "rating": 5,
+      "ratedAt": "2024-10-15T18:00:00Z"
+    },
+    {
+      "id": 2,
+      "attendeeId": 2,
+      "eventId": 1,
+      "rating": 4,
+      "ratedAt": "2024-10-15T18:30:00Z"
+    },
+    {
+      "id": 3,
+      "attendeeId": 4,
+      "eventId": 2,
+      "rating": 3,
+      "ratedAt": "2024-10-20T17:00:00Z"
+    }
+  ]
+}
